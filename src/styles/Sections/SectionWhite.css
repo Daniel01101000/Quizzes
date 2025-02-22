@@ -1,0 +1,8 @@
+.SectionWhite {
+    width: 100%;
+    background-color: #F5F5F5;
+    min-height: 100vh; /* Asegura que ocupe toda la altura de la ventana */
+    position: relative; /* Necesario para posicionar el footer dentro de esta sección */
+    box-sizing: border-box;
+  }
+  

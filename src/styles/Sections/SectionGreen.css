@@ -1,0 +1,19 @@
+.SectionGreen {
+    width: 20%;
+    height: 700px; /* Ajustar altura automáticamente para que se ajuste al contenido */
+    background-color: rgb(88, 255, 199);
+    padding: 55px; /* Agregar padding para separar el contenido de los bordes *//* Bordes redondeados para un look más moderno */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrado horizontal */
+    justify-content: center; /* Centrado vertical */
+  }
+  
+  .SectionGreen p {
+    max-width: 800px; /* Limitar el ancho del texto para mejor legibilidad */
+    font-size: 1.6rem; /* Tamaño de fuente adecuado */
+    line-height: 1.1; /* Espaciado entre líneas para mayor comodidad de lectura */ /* Justificar el texto */
+    color: #333; /* Color de texto oscuro para mayor contraste */
+    text-align: left;
+    word-spacing: 1px;
+  }
