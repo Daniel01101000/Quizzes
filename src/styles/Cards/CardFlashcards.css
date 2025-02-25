@@ -1,0 +1,39 @@
+.Answers { 
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     background-color: #222222;
+     border-radius: 8px;
+     border: #ccc 3px solid;
+     padding: 10px;
+}
+
+.optionsText {
+    line-height: 1.8; /* Ajusta el valor según necesites */
+    margin-bottom: 8px;
+}
+
+.option-text {
+    color: #ccc;
+}
+
+.answer-button {
+    padding: 10px;
+    background-color: #fff;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.answer-button:hover {
+    background-color: #ff0000;
+}
+
+.cardFlashcard {
+    background-color: #fff;
+    width: 300px;
+    height: auto;
+    padding: 20px;
+    min-height: 300px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}

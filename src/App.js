@@ -1,4 +1,4 @@
-import './styles/App.css';
+import './styles/App/App.css';
 import Header from './components/Header.jsx';
 import AppRouter from './components/Router.jsx';
 import Footer from './components/Footer/footer.jsx';

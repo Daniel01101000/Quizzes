@@ -1,28 +1,29 @@
-.card {
-    background-color: #222222;
-    color: #F5F5F5;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    max-width: 300px;
-    margin: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-  }
-  
-  .card-title {
-    font-size: 1.5rem;
-    color: #6a0dad;
-    margin-bottom: 10px;
-    font-weight: 600;
-  }
-  
-  .card-description {
-    font-size: 1rem;
-    color: #F5F5F5;
-    line-height: 1.5;
-  }
+.cardTopic {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+  margin: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.cardTopic:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  color: #6a0dad;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.card-description-topic {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #333;
+}

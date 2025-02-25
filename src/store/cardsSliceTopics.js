@@ -4,8 +4,8 @@ const initialState = {
   cards: [],
 };
 
-const cardsSlice = createSlice({
-  name: "cards",
+const cardsSliceTopics = createSlice({
+  name: "cardsTopics", // Nombre único para este slice
   initialState,
   reducers: {
     addCard: (state, action) => {
@@ -14,5 +14,5 @@ const cardsSlice = createSlice({
   },
 });
 
-export const { addCard } = cardsSlice.actions;
-export default cardsSlice.reducer;
+export const { addCard } = cardsSliceTopics.actions;
+export default cardsSliceTopics.reducer;

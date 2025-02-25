@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { addCard } from "../../../store/cardsSlice";
-import "../../../styles/CreateCards.css";
+import { addCard } from "../../../store/cardsSliceTopics";
+import "../../../styles/createCards/CreateCards.css";
 
 export default function CreateTopic() {
   const [name, setName] = useState("");

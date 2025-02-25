@@ -3,9 +3,10 @@ import SectionWhiteTopics from '../../Sections/SectionWhiteTopics.jsx';
 
 const Topics = () => {
   return (
-    <div>
+    <>
+      <h1>Topics</h1>
       <SectionWhiteTopics/>
-    </div>
+    </>
   );
 };
 
