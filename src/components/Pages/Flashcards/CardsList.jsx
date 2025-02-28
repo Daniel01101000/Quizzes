@@ -10,7 +10,7 @@ export default function CardsList() {
   return (
     <div className="cards-container">
       {cards.map((card, index) => (
-        <CardFlashcard key={index} name={card.name} questionA={card.questionA} questionB={card.questionB} questionC={card.questionC}/>
+        <CardFlashcard key={index} name={card.name} questionA={card.questionA} questionB={card.questionB} questionC={card.questionC} quizId={quizId}/>
       ))}
     </div>
   );

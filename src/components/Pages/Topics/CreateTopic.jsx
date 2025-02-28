@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addCard } from "../../../store/cardsSliceTopics";
 import "../../../styles/createCards/CreateCards.css";
+import { addTopic } from "../../../store/topicsSlice";  // 👈 Asegúrate de importar la acción correcta
 
 export default function CreateTopic() {
   const [name, setName] = useState("");
@@ -11,7 +12,12 @@ export default function CreateTopic() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (name && description) {
-      dispatch(addCard({ name, description })); // Enviamos a Redux
+      const newTopic = {
+        id: Date.now().toString(), // Genera un ID único
+        name,
+        description,
+      };
+      dispatch(addTopic(newTopic)); // 👈 Usar `addTopic` en lugar de `addCard`
       setName("");
       setDescription("");
     }

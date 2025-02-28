@@ -1,8 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
-import '../../../../styles/QuizzesList.css';
+import '../../styles/QuizzesList.css';
 import { Link } from "react-router-dom";
-import CreateQuiz from "../../Quizzes/CreateQuiz.jsx";
 
 const QuizzesList = () => {
   const { topicId } = useParams();
@@ -41,8 +40,6 @@ const QuizzesList = () => {
       ) : (
         <p>No hay quizzes para este tema</p>
       )}
-       
-       <CreateQuiz/>
     </div>
   );
 };

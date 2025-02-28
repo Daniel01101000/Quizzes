@@ -1,7 +1,7 @@
 import React from "react";
 import '../../../styles/Cards/CardFlashcards.css';
 
-export default function CardTopic({ name, questionA, questionB, questionC }) {
+export default function CardFlashcard({ name, questionA, questionB, questionC }) {
   return (
     <div className="cardFlashcard">
       <h3 className="card-title">{name}</h3>

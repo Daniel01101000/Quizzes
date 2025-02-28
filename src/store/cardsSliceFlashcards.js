@@ -9,10 +9,16 @@ const cardsSliceFlashcards = createSlice({
   initialState,
   reducers: {
     addCard: (state, action) => {
-      state.cards.push(action.payload);
+      const newCard = action.payload;
+      if (!state.cards.some((card) => card.id === newCard.id)) {
+        state.cards.push(newCard);
+      }
+    },
+    clearCards: (state) => {
+      state.cards = [];
     },
   },
 });
 
-export const { addCard } = cardsSliceFlashcards.actions;
+export const { addCard, clearCards } = cardsSliceFlashcards.actions;
 export default cardsSliceFlashcards.reducer;

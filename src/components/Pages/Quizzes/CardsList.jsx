@@ -4,13 +4,23 @@ import CardQuiz from "./CardQuiz.jsx";
 import "../../../styles/createCards/CreateCards.css";
 
 export default function CardsList() {
-  const cards = useSelector((state) => state.cardsQuizzes.cards); // Obtener tarjetas de Redux
+  const cards = useSelector((state) => state.quizzes.quizzes);
+const cardsArray = Object.values(cards); // Convierte el objeto en un array
 
-  return (
-    <div className="cards-container">
-      {cards.map((card, index) => (
-        <CardQuiz key={index} name={card.name} />
-      ))}
-    </div>
-  );
+return (
+  <div className="cards-container">
+    {cardsArray.length > 0 ? (
+      cardsArray.map((card, index) => (
+        <CardQuiz
+        key={index}
+        name={card.title}
+        quizId={card.id}       // Asegúrate de que 'card.id' contenga el quizId
+        topicId={card.topicId} // Asegúrate de que 'card.topicId' contenga el topicId
+      />
+      ))
+    ) : (
+      <p>No hay tarjetas disponibles</p>
+    )}
+  </div>
+);
 }

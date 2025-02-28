@@ -4,5 +4,6 @@
     min-height: 100vh; /* Asegura que ocupe toda la altura de la ventana */
     position: relative; /* Necesario para posicionar el footer dentro de esta sección */
     box-sizing: border-box;
+    margin-top: 33px;
   }
   

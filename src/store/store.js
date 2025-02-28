@@ -1,15 +1,17 @@
 import { configureStore } from "@reduxjs/toolkit";
 import cardsReducerTopics from "./cardsSliceTopics";
-import cardsReducerQuizzes from "./cardsSliceQuizzes";
+import cardsReducerQuizzes from "./cardsSliceQuizzes"; // Renombrado para mayor claridad
 import cardsReducerFlashcards from "./cardsSliceFlashcards";
-import rootReducer from "./rootReducer"; // Solo si tienes más reducers
+import quizzesReducer from "./quizzesSlice";
+import topicsReducer from "./topicsSlice";
 
 const store = configureStore({
   reducer: {
     cardsTopics: cardsReducerTopics,
     cardsQuizzes: cardsReducerQuizzes,
     cardsFlashcards: cardsReducerFlashcards,
-    root: rootReducer, // Solo si `rootReducer` agrupa más reducers
+    topics: topicsReducer,
+    quizzes: quizzesReducer,
   },
 });
 
