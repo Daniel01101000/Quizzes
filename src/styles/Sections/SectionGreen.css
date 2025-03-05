@@ -1,19 +1,40 @@
+/* Estilos generales para las secciones */
+.home-container {
+  display: flex;
+  flex-wrap: wrap; /* Permite que los elementos se acomoden si no caben en una fila */
+}
+
 .SectionGreen {
-    width: 20%;
-    height: 700px; /* Ajustar altura automáticamente para que se ajuste al contenido */
-    background-color: rgb(88, 255, 199);
-    padding: 55px; /* Agregar padding para separar el contenido de los bordes *//* Bordes redondeados para un look más moderno */
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centrado horizontal */
-    justify-content: center; /* Centrado vertical */
+  width: 20%;
+  height: 700px; /* Ajustar altura automáticamente para que se ajuste al contenido */
+  background-color: rgb(88, 255, 199);
+  padding: 55px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centrado horizontal */
+  justify-content: center; /* Centrado vertical */
+}
+
+.SectionGreen p {
+  max-width: 800px;
+  font-size: 1.4rem;
+  line-height: 1.1;
+  color: #333;
+  text-align: left;
+  word-spacing: 1px;
+}
+
+/* Media query para pantallas menores a 1360px */
+@media (max-width: 1430px) {
+  .home-container {
+    flex-direction: column; /* Cambia la disposición a columna */
+    align-items: center; /* Alinea las secciones al centro */
   }
+
+  .SectionGreen {
+    width: 100%; /* Ancho más grande para las pantallas pequeñas */
+    height: auto; /* Ajusta la altura automáticamente */
+  }
+
   
-  .SectionGreen p {
-    max-width: 800px; /* Limitar el ancho del texto para mejor legibilidad */
-    font-size: 1.6rem; /* Tamaño de fuente adecuado */
-    line-height: 1.1; /* Espaciado entre líneas para mayor comodidad de lectura */ /* Justificar el texto */
-    color: #333; /* Color de texto oscuro para mayor contraste */
-    text-align: left;
-    word-spacing: 1px;
-  }
+}

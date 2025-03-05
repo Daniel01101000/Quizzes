@@ -4,39 +4,39 @@ import { addCard } from "../../../store/cardsSliceFlashcards";
 import { v4 as uuidv4 } from "uuid"; // 🔥 Importar uuid para IDs únicos
 import "../../../styles/createCards/CreateCards.css";
 
-export default function CreateFlashcard({ quizId }) { // 🔥 Recibir quizId
+export default function CreateFlashcard({ quizId }) {
   const [name, setName] = useState("");
   const [questionA, setQuestionA] = useState("");
   const [questionB, setQuestionB] = useState("");
   const [questionC, setQuestionC] = useState("");
+  const [correctAnswer, setCorrectAnswer] = useState(""); // 🔥 Guardar la respuesta correcta seleccionada
+
   const dispatch = useDispatch();
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Obtener la opción seleccionada
-    const selectedOption = document.querySelector('input[name="correctOption"]:checked');
-
-    if (!name || !questionA || !questionB || !questionC || !selectedOption) {
+    if (!name || !questionA || !questionB || !questionC || !correctAnswer) {
       alert("Please complete all fields and select a correct answer.");
       return;
     }
 
-    dispatch(addCard({ 
-      id: uuidv4(), // 🔥 Generar un ID único
-      quizId, // 🔥 Agregar el quizId
-      name, 
-      questionA, 
-      questionB, 
-      questionC, 
-      correctAnswer: selectedOption.value 
+    dispatch(addCard({
+      id: uuidv4(),
+      quizId,
+      name,
+      questionA,
+      questionB,
+      questionC,
+      correctAnswer, // Guarda la letra directamente
     }));
-
-    // Resetear los valores después de enviar
+  
+    // Resetear valores
     setName("");
     setQuestionA("");
     setQuestionB("");
     setQuestionC("");
+    setCorrectAnswer("");
   };
 
   return (
@@ -66,18 +66,39 @@ export default function CreateFlashcard({ quizId }) { // 🔥 Recibir quizId
         <label>Choose the correct answer:</label>
         <div className="options">
           <div className="options-radio">
-            <label htmlFor="optionA"><span className="optionText">A)</span></label>
-            <input id="optionA" value={questionA} type="radio" name="correctOption" />
+            <label htmlFor="optionA">A)</label>
+            <input
+   id="optionA"
+    type="radio"
+    name="correctOption"
+    value="A"
+    checked={correctAnswer === "A"}
+        onChange={() => setCorrectAnswer("A")}
+        />
           </div>
 
           <div className="options-radio">
-            <label htmlFor="optionB"><span className="optionText">B)</span></label>
-            <input id="optionB" value={questionB} type="radio" name="correctOption" />
+            <label htmlFor="optionB">B)</label>
+            <input
+  id="optionB"
+  type="radio"
+  name="correctOption"
+  value="B"
+  checked={correctAnswer === "B"}
+  onChange={() => setCorrectAnswer("B")}
+/>
           </div>
 
           <div className="options-radio">
-            <label htmlFor="optionC"><span className="optionText">C)</span></label>
-            <input id="optionC" value={questionC} type="radio" name="correctOption" />
+            <label htmlFor="optionC">C)</label>
+            <input
+  id="optionC"
+  type="radio"
+  name="correctOption"
+  value="C"
+  checked={correctAnswer === "C"}
+  onChange={() => setCorrectAnswer("C")}
+/>
           </div>
         </div>
 

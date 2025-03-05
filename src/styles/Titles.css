@@ -1,0 +1,11 @@
+.Title {
+    color: #6a0dad;
+    font-size: 5em;
+    margin-top: 70px;
+}
+
+@media (max-width: 580px) {
+    .Title {
+        font-size: 3.2em; /* Reduce el tamaño de la fuente en pantallas pequeñas */
+    }
+}

@@ -1,3 +1,5 @@
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+
 .Answers { 
      display: flex;
      flex-direction: column;
@@ -6,6 +8,9 @@
      border-radius: 8px;
      border: #ccc 3px solid;
      padding: 10px;
+     word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .optionsText {
@@ -14,7 +19,7 @@
 }
 
 .option-text {
-    color: #ccc;
+    color: #fafafa;
 }
 
 .answer-button {
@@ -22,10 +27,6 @@
     background-color: #fff;
     cursor: pointer;
     border-radius: 10px;
-}
-
-.answer-button:hover {
-    background-color: #ff0000;
 }
 
 .cardFlashcard {
@@ -67,3 +68,29 @@
     line-height: 1.5;
     color: #333;
   }
+
+  .grid-contenedor-falshcards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Asegura un mínimo de 250px */
+    gap: 15px;  /* ✅ Esto centra las cards en su celda */
+    
+    justify-content: center;
+    place-items: center;
+    margin-top: 20px;
+}
+
+.Problem {
+  color: #1F1F1F;
+  font-size: 24px;
+  font-size: sans-serif;
+}
+
+.answer-button.correct {
+  background-color: #4CAF50 ; /* Verde */
+  color: white;
+}
+
+.answer-button.incorrect {
+  background-color: #FF4C4C ; /* Rojo */
+  color: white;
+}

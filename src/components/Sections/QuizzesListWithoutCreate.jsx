@@ -1,19 +1,28 @@
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
-import '../../styles/QuizzesList.css';
+import "../../styles/Lists/QuizzesList.css";
 import { Link } from "react-router-dom";
+import Emojis from "../Emojis/Emojis.jsx";
 
 const QuizzesList = () => {
   const { topicId } = useParams();
+  
+  // Obtener todos los temas de Redux
+  const topics = useSelector((state) => state.topics.topics);
   const quizzes = useSelector((state) => state.quizzes.quizzes);
-  console.log("Quizzes en Redux:", quizzes);
-  const cards = useSelector((state) => state.cardsQuizzes.cards); // Obtener las tarjetas
+  const cards = useSelector((state) => state.cardsQuizzes.cards);
 
+  // Buscar el tema actual por su ID
+  const topic = topics[topicId]; // Acceder directamente si los temas son un objeto
+
+  // Filtrar quizzes que pertenezcan a este tema
   const topicQuizzes = Object.values(quizzes).filter((quiz) => quiz.topicId === topicId);
-  console.log(topicId);
+
   return (
-    <div className="contenedor">
-      <h1>Quizzes para el tema {topicId}</h1>
+    <div className="grid-contenedor">
+      {/* Usamos topic?.name para evitar errores si no existe */}
+      <h1>Quizzes para el tema {topic?.name || "Desconocido"}</h1>  
+
       {topicQuizzes.length > 0 ? (
         topicQuizzes.map((quiz) => (
           <Link 
@@ -21,24 +30,27 @@ const QuizzesList = () => {
             to={`/topics/${topicId}/quizzes/${quiz.id}/flashcards`} 
             style={{ textDecoration: "none" }}
           >
-          <div key={quiz.id} className="quiz-container">
-            <div className="card">
-            <h3 className="card-title">{quiz.title}</h3>
+            <div className="quiz-container">
+              <div className="card">
+                <h3 className="card-title">{quiz.title}</h3>
+              </div>
+              <div className="cards-container">
+                {cards
+                  .filter((card) => card.quizId === quiz.id)
+                  .map((card) => (
+                    <div key={card.id} className="card">
+                      <h3>{card.title}</h3>
+                    </div>
+                  ))}
+              </div>
             </div>
-            <div className="cards-container">
-              {cards
-                .filter((card) => card.quizId === quiz.id) // Filtrar tarjetas del quiz actual
-                .map((card) => (
-                  <div key={card.id} className="card">
-                     <h3>{card.title}</h3>
-                     </div>
-                ))}
-            </div>
-          </div>
           </Link>
         ))
       ) : (
+        <>
         <p>No hay quizzes para este tema</p>
+          <Emojis />
+        </>
       )}
     </div>
   );

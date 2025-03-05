@@ -1,49 +1,72 @@
-import { useParams } from "react-router-dom";
+import { useParams } from "react-router-dom"; 
 import { useSelector } from "react-redux";
-import '../../../../styles/QuizzesList.css';
+import '../../../../styles/Lists/QuizzesList.css';
 import { Link } from "react-router-dom";
 import CreateQuiz from "../../Quizzes/CreateQuiz.jsx";
+import { useDispatch } from "react-redux";
+import X from "../../../X/X-button.jsx";
+import { removeCard as removeQuiz } from "../../../../store/cardsSliceQuizzes.js"; // Importa la acción
+import Emojis from "../../../Emojis/Emojis.jsx";
 
 const QuizzesList = () => {
   const { topicId } = useParams();
-  const quizzes = useSelector((state) => state.quizzes.quizzes);
-  console.log("Quizzes en Redux:", quizzes);
-  const cards = useSelector((state) => state.cardsQuizzes.cards); // Obtener las tarjetas
+  const dispatch = useDispatch();
 
+  // Obtener los temas desde Redux
+  const topics = useSelector((state) => state.topics.topics); 
+  const quizzes = useSelector((state) => state.quizzes.quizzes);
+  const cards = useSelector((state) => state.cardsQuizzes.cards); 
+
+  // Buscar el tema actual en Redux
+  const topic = topics[topicId]; 
+
+  // Filtrar quizzes que pertenecen a este topicId
   const topicQuizzes = Object.values(quizzes).filter((quiz) => quiz.topicId === topicId);
-  console.log(topicId);
+
   return (
-    <div className="contenedor">
-      <h1>Quizzes para el tema {topicId}</h1>
-      {topicQuizzes.length > 0 ? (
-        topicQuizzes.map((quiz) => (
-          <Link 
-            key={quiz.id} 
-            to={`/topics/${topicId}/quizzes/${quiz.id}/flashcards`} 
-            style={{ textDecoration: "none" }}
-          >
-          <div key={quiz.id} className="quiz-container">
-            <div className="card">
-            <h3 className="card-title">{quiz.title}</h3>
+    <>
+      {/* Mostramos el nombre del tema o un mensaje si no se encuentra */}
+      <h1 className="Tema">Quizzes for the topic {topic?.name || "Desconocido"}</h1>  
+
+      <div className="grid-contenedor">
+        {topicQuizzes.length > 0 ? (
+          topicQuizzes.map((quiz) => (
+            <div key={quiz.id} className="quiz-container">
+              {/* Aquí ponemos el botón de eliminación fuera del Link */}
+              <div className="card-quizzes">
+                <X onClick={() => dispatch(removeQuiz(quiz.id))} type="quiz" id={quiz.id} />
+                <Link 
+                  to={`/topics/${topicId}/quizzes/${quiz.id}/flashcards`} 
+                  style={{ textDecoration: "none" }}
+                >
+                  <h3 className="card-title">{quiz.title}</h3>
+                </Link>
+              </div>
+              <div className="cards-container">
+                {cards
+                  .filter((card) => card.quizId === quiz.id) 
+                  .map((card) => (
+                    <div key={card.id} className="card">
+                      <h3>{card.title}</h3>
+                    </div>
+                  ))}
+              </div>
             </div>
-            <div className="cards-container">
-              {cards
-                .filter((card) => card.quizId === quiz.id) // Filtrar tarjetas del quiz actual
-                .map((card) => (
-                  <div key={card.id} className="card">
-                     <h3>{card.title}</h3>
-                     </div>
-                ))}
+          ))
+        ) : (
+          <>
+            <div>
+            <p className="Problem">There are no quizzes for this topic</p>
+            <Emojis />
             </div>
-          </div>
-          </Link>
-        ))
-      ) : (
-        <p>No hay quizzes para este tema</p>
-      )}
-       
-       <CreateQuiz/>
-    </div>
+          </>
+        )}
+      </div>
+
+      <div className="create-quiz-container">
+        <CreateQuiz />
+      </div>
+    </>
   );
 };
 

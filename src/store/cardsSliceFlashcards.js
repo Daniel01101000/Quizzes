@@ -5,7 +5,7 @@ const initialState = {
 };
 
 const cardsSliceFlashcards = createSlice({
-  name: "cardsFlashcards", // Nombre único para este slice
+  name: "cardsFlashcards",
   initialState,
   reducers: {
     addCard: (state, action) => {
@@ -17,8 +17,11 @@ const cardsSliceFlashcards = createSlice({
     clearCards: (state) => {
       state.cards = [];
     },
+    removeCard: (state, action) => {
+      state.cards = state.cards.filter((card) => card.id !== action.payload);
+    },
   },
 });
 
-export const { addCard, clearCards } = cardsSliceFlashcards.actions;
+export const { addCard, clearCards, removeCard } = cardsSliceFlashcards.actions;
 export default cardsSliceFlashcards.reducer;

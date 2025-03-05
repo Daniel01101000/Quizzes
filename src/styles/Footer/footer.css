@@ -4,4 +4,6 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-}
+    width: 100%; /* Asegura que se extienda por toda la pantalla */
+    margin-top: auto; /* Empuja el footer al fondo */
+  }

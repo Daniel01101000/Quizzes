@@ -5,14 +5,17 @@ const initialState = {
 };
 
 const cardsSliceTopics = createSlice({
-  name: "cardsTopics", // Nombre único para este slice
+  name: "cardsTopics",
   initialState,
   reducers: {
     addCard: (state, action) => {
       state.cards.push(action.payload);
     },
+    removeCard: (state, action) => {
+      state.cards = state.cards.filter((card) => card.id !== action.payload);
+    },
   },
 });
 
-export const { addCard } = cardsSliceTopics.actions;
+export const { addCard, removeCard } = cardsSliceTopics.actions;
 export default cardsSliceTopics.reducer;

@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux";
-import CardFlashcard from "../Pages/Flashcards/CardFlashcard.jsx"; 
+import CardFlashcard from "../Pages/Flashcards/Cards/CardFlashcard.jsx"; 
 import '../../styles/Cards/CardFlashcards.css';
+import Emojis from "../Emojis/Emojis.jsx";
 
 const FlashcardsListWithoutCreate = () => {
   const flashcards = useSelector((state) => state.cardsFlashcards.cards) || [];
@@ -8,17 +9,23 @@ const FlashcardsListWithoutCreate = () => {
   return (
     <>
       {flashcards.length === 0 ? (
-        <p>No hay flashcards disponibles para este quiz</p>
+        <>  
+        <p className="Problem">There are no flashcards available for this quiz</p>
+        <Emojis />
+        </>
       ) : (
-        <div style={{ display: "grid", gap: "1rem" }}>
+        <div className="grid-contenedor">
           {flashcards.map((flashcard) => (
-            <CardFlashcard 
-              key={flashcard.id} 
-              name={flashcard.name} 
-              questionA={flashcard.questionA} 
-              questionB={flashcard.questionB} 
-              questionC={flashcard.questionC} 
-            />
+             <CardFlashcard 
+             key={flashcard.id} 
+             id={flashcard.id}  // ✅ PASAR EL ID AQUÍ
+             name={flashcard.name} 
+             questionA={flashcard.questionA} 
+             questionB={flashcard.questionB} 
+             questionC={flashcard.questionC} 
+             correctAnswer={flashcard.correctAnswer} // Pasando correctAnswer aquí
+             type="flashcard"
+           />
           ))}
         </div>
       )}

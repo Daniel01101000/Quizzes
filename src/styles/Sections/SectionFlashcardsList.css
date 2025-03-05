@@ -1,0 +1,24 @@
+.grid-contenedor-falshcardss {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 15px;
+    justify-content: center;
+    margin-top: 70px;
+    place-items: center;
+}
+
+.Problem-falshcards {
+    margin-top: 60px;
+    color: #1F1F1F;
+    font-size: 24px;
+    font-family: sans-serif;
+}
+
+@media (max-width: 615px) {
+    .Problem {
+        font-size: 1.3em; /* Reduce el tamaño de la fuente en pantallas pequeñas */
+    }
+    .Problem-falshcards {
+        font-size: 1.3em; /* Reduce el tamaño de la fuente en pantallas pequeñas */
+    }
+}

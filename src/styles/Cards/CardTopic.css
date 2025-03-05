@@ -1,12 +1,14 @@
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+
 .cardTopic {
   background-color: #fff;
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  max-width: 300px;
   margin: 10px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
+  width: 350px;
 }
 
 .cardTopic:hover {
@@ -20,10 +22,32 @@
   color: #6a0dad;
   margin-bottom: 10px;
   font-weight: 600;
+  word-wrap: break-word; /* Asegura que las palabras largas en el título se rompan */
+  overflow-wrap: break-word; /* Asegura que el texto del título se ajuste */
+  word-break: break-word; /* Permite que el texto se rompa si es necesario */
 }
 
 .card-description-topic {
   font-size: 1rem;
   line-height: 1.5;
   color: #333;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.grid-container {
+  display: grid;
+  width: 90%;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 15px;
+  justify-content: center;
+  place-items: center;
+  margin: auto;
+}
+
+.grid-container-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }

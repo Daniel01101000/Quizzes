@@ -24,3 +24,18 @@
     color: #5c6bc0; /* Color que puede combinar con tu paleta morada */
     margin-bottom: 20px; /* Espaciado debajo del título */
   }
+
+  @media (max-width: 1430px) {
+    .SectionWhiteHome {
+      width: 100%;
+      height: 700px; /* Ajustar altura automáticamente para que se ajuste al contenido */
+      background-color: #F5F5F5;
+      padding: 40px 20px; /* Agregar padding para separar el contenido de los bordes *//* Bordes redondeados para un look más moderno */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para darle profundidad */
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Centrado horizontal */
+      justify-content: center; /* Centrado vertical */
+       /* Centrado con margen superior e inferior */
+    }
+  }

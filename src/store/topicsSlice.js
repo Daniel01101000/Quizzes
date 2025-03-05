@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  topics: {},  // 🔥 Debe ser un objeto vacío para evitar errores
+  topics: {},  // Almacena los topics
 };
 
 const topicsSlice = createSlice({
@@ -10,10 +10,13 @@ const topicsSlice = createSlice({
   reducers: {
     addTopic: (state, action) => {
       const { id, name, description } = action.payload;
-      state.topics[id] = { id, name, description };  // Agrega el nuevo topic
+      state.topics[id] = { id, name, description };
+    },
+    removeTopic: (state, action) => {
+      delete state.topics[action.payload]; // Elimina el topic por su id
     },
   },
 });
 
-export const { addTopic } = topicsSlice.actions;
+export const { addTopic, removeTopic } = topicsSlice.actions;
 export default topicsSlice.reducer;

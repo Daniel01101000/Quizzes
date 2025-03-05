@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { addCard } from "../../../store/cardsSliceTopics";
 import "../../../styles/createCards/CreateCards.css";
 import { addTopic } from "../../../store/topicsSlice";  // 👈 Asegúrate de importar la acción correcta
 

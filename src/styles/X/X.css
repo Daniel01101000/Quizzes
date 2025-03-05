@@ -1,0 +1,12 @@
+
+.X {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: none;
+  border: none;
+  font-size: 29px;
+  cursor: pointer;
+  color: #666666;
+  z-index: 10;  
+}
