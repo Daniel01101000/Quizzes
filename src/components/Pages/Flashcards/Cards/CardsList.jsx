@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import CardFlashcard from "./CardFlashcard.jsx";
-import "../../../styles/createCards/CreateCards.css";
+import "styles/createCards/CreateCards.css";
 
 export default function CardsList() {
   // Cambiar de state.cards.cards a state.cardsFlashcards.cards

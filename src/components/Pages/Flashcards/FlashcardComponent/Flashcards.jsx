@@ -1,5 +1,5 @@
 import React from 'react';
-import SectionWhiteFlashcard from '../../Sections/SectionWhiteFlashcard.jsx';
+import SectionWhiteFlashcard from 'components/Sections/SectionsWhite/Flashcards/SectionWhiteFlashcard.jsx';
 
 const Flashcards = () => {
   return (

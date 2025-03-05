@@ -1,12 +1,12 @@
 import { useParams } from "react-router-dom"; 
 import { useSelector } from "react-redux";
-import '../../../../styles/Lists/QuizzesList.css';
+import 'styles/Lists/QuizzesList.css';
 import { Link } from "react-router-dom";
-import CreateQuiz from "../../Quizzes/CreateQuiz.jsx";
+import CreateQuiz from "components/Pages/Quizzes/CreateQuiz/CreateQuiz.jsx";
 import { useDispatch } from "react-redux";
-import X from "../../../X/X-button.jsx";
-import { removeCard as removeQuiz } from "../../../../store/cardsSliceQuizzes.js"; // Importa la acción
-import Emojis from "../../../Emojis/Emojis.jsx";
+import X from "components/X/X-button.jsx";
+import { removeCard as removeQuiz } from "store/cardsSliceQuizzes.js"; // Importa la acción
+import Emojis from "components/Emojis/Emojis.jsx";
 
 const QuizzesList = () => {
   const { topicId } = useParams();

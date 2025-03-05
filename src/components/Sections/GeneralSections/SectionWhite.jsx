@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../styles/Sections/SectionWhite.css';
+import 'styles/Sections/SectionWhite.css';
 
 const SectionWhite = () => {
   return (

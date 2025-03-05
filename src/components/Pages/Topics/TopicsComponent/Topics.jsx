@@ -1,5 +1,5 @@
 import React from 'react';
-import SectionWhiteTopics from '../../Sections/SectionWhiteTopics.jsx';
+import SectionWhiteTopics from 'components/Sections/SectionsWhite/Topic/SectionWhiteTopics.jsx';
 
 const Topics = () => {
   return (

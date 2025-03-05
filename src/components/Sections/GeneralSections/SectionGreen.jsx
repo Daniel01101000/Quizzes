@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../styles/Sections/SectionGreen.css';
+import 'styles/Sections/SectionGreen.css';
 
 const SectionGreen = () => {
   return (

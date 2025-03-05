@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import "../../../../styles/Cards/CardFlashcards.css";
-import X from "../../../X/X-button.jsx";
+import "styles/Cards/CardFlashcards.css";
+import X from "components/X/X-button.jsx";
 import confetti from "canvas-confetti"; // 🔥 Importar librería para el confeti
-import audio from "../../../../audios/sonido.wav"; // Importar el archivo de audio
+import audio from "audios/sonido.wav"; // Importar el archivo de audio
 
 export default function CardFlashcard({ name, questionA, questionB, questionC, correctAnswer, id }) {
   const [selectedAnswer, setSelectedAnswer] = useState(null);

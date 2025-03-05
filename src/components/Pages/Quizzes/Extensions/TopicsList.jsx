@@ -1,12 +1,10 @@
-import { useSelector, useDispatch } from "react-redux";
-import { removeTopic } from "../../../../store/topicsSlice"; // Asegúrate de importar esto
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import "../../../../styles/Cards/CardTopic.css";
-import X from "../../../X/X-button.jsx";
+import "styles/Cards/CardTopic.css";
+import X from "components/X/X-button.jsx";
 
 const TopicsList = () => {
   const topics = useSelector((state) => state.topics.topics) || {};
-  const dispatch = useDispatch();
 
   return (
     <div className="grid-container-container">

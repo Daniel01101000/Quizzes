@@ -1,5 +1,5 @@
 import React from 'react';
-import SectionWhiteQuiz from '../../../Sections/SectionWhiteQuiz.jsx';
+import SectionWhiteQuiz from 'components/Sections/SectionsWhite/Quiz/SectionWhiteQuiz.jsx';
 
 const Quizzes = () => {
   return (

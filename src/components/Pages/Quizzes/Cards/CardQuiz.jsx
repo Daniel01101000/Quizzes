@@ -1,9 +1,9 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { removeCard as removeQuiz } from "../../../../store/cardsSliceQuizzes.js"; // Importa la acción
+import { removeCard as removeQuiz } from "store/cardsSliceQuizzes.js"; // Importa la acción
 import { Link } from "react-router-dom";
-import "../../../../styles/Cards/CardQuiz.css";
-import X from "../../../X/X-button.jsx";
+import "styles/Cards/CardQuiz.css";
+import X from "components/X/X-button.jsx";
 
 export default function CardQuiz({ name, quizId, topicId }) {
   const dispatch = useDispatch();

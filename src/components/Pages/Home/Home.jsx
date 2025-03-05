@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import quizz from '../../../images/quiz1.jpg';
 import quiz3 from '../../../images/quiz3.jpg'; // Asegúrate de importar la segunda imagen
-import SectionWhiteHome from '../../Sections/SectionWhiteHome.jsx';
-import SectionGreen from '../../Sections/SectionGreen.jsx';
-import '../../../styles/Pages/Home.css';
+import SectionWhiteHome from 'components/Sections/SectionsWhite/Home/SectionWhiteHome.jsx';
+import SectionGreen from 'components/Sections/GeneralSections/SectionGreen.jsx';
+import 'styles/Pages/Home.css';
 
 const Home = () => {
   const [image, setImage] = useState(quizz); // Estado para la imagen
@@ -32,7 +32,7 @@ const Home = () => {
 
   return (
     <>
-      <img src={image} alt="image of quizz" className='imagen-fondo' />
+      <img src={image} alt="quiz" className='imagen-fondo' />
       <div className="home-container">
         <SectionWhiteHome />
         <SectionGreen />

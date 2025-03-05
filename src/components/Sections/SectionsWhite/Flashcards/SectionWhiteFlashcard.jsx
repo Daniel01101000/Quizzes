@@ -1,7 +1,7 @@
 import React from 'react';
-import '../../styles/Sections/SectionWhite.css';
-import FlashcardsListWithoutCreate from './FlashcardsListWithoutCreate.jsx';
-import '../../styles/Titles.css';
+import 'styles/Sections/SectionWhite.css';
+import FlashcardsListWithoutCreate from '../../WithoutCreate/FlashcardsListWithoutCreate.jsx';
+import 'styles/Titles.css';
 
 const SectionWhiteFlashcard = () => {
   return (

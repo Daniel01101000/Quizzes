@@ -1,9 +1,9 @@
 import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom"; // 🔥 Obtener quizId desde la URL
-import CardFlashcard from "../../Flashcards/Cards/CardFlashcard.jsx"; 
-import '../../../../styles/Sections/SectionFlashcardsList.css';
-import CreateFlashcard from "../../Flashcards/CreateFlashcard.jsx";
-import Emojis from "../../../Emojis/Emojis.jsx";
+import CardFlashcard from "components/Pages/Flashcards/Cards/CardFlashcard.jsx"; 
+import 'styles/Sections/SectionFlashcardsList.css';
+import CreateFlashcard from "components/Pages/Flashcards/CreateFlashcard/CreateFlashcard.jsx";
+import Emojis from "components/Emojis/Emojis.jsx";
 
 const FlashcardsList = () => {
   const { quizId } = useParams(); // ✅ Obtener el quizId desde la URL

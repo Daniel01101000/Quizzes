@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import CardTopic from "./CardTopic.jsx";
-import "../../../styles/createCards/CreateCards.css";
+import "styles/createCards/CreateCards.css";
 
 export default function CardsList() {
   const cards = useSelector((state) => state.cardsTopics.cards); // Obtener tarjetas de Redux

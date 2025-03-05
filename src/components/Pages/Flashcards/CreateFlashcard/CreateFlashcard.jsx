@@ -1,8 +1,8 @@
 import React, { useState } from "react"; 
 import { useDispatch } from "react-redux";
-import { addCard } from "../../../store/cardsSliceFlashcards";
+import { addCard } from "store/cardsSliceFlashcards";
 import { v4 as uuidv4 } from "uuid"; // 🔥 Importar uuid para IDs únicos
-import "../../../styles/createCards/CreateCards.css";
+import "styles/createCards/CreateCards.css";
 
 export default function CreateFlashcard({ quizId }) {
   const [name, setName] = useState("");

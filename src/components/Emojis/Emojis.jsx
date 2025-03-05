@@ -1,5 +1,5 @@
 import React from "react";
-import '../../styles/Emojis/Emojis.css';
+import 'styles/Emojis/Emojis.css';
 
 export default function Emojis() {
   // Lista de emojis

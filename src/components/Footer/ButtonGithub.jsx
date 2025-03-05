@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaGithub } from 'react-icons/fa'; // Importa el ícono de GitHub
-import '../../styles/Footer/ButtonGithub.css';
+import 'styles/Footer/ButtonGithub.css';
 
 const ButtonGithub = () => {
   const handleClick = () => {

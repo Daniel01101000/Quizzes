@@ -1,8 +1,8 @@
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
-import "../../styles/Lists/QuizzesList.css";
+import "styles/Lists/QuizzesList.css";
 import { Link } from "react-router-dom";
-import Emojis from "../Emojis/Emojis.jsx";
+import Emojis from "components/Emojis/Emojis.jsx";
 
 const QuizzesList = () => {
   const { topicId } = useParams();

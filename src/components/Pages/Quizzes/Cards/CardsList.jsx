@@ -1,8 +1,8 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import CardQuiz from "./CardQuiz.jsx";
-import "../../../../styles/createCards/CreateCards.css";
-import Emojis from "../../../Emojis/Emojis.jsx";
+import "styles/createCards/CreateCards.css";
+import Emojis from "components/Emojis/Emojis.jsx";
 
 export default function CardsList() {
   const cards = useSelector((state) => state.quizzes.quizzes);

@@ -1,8 +1,8 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { removeCard as removeFlashcard } from "../../store/cardsSliceFlashcards";
-import { removeQuiz } from "../../store/quizzesSlice";
-import { removeTopic } from "../../store/topicsSlice";
+import { removeCard as removeFlashcard } from "store/cardsSliceFlashcards";
+import { removeQuiz } from "store/quizzesSlice";
+import { removeTopic } from "store/topicsSlice";
 
 import '../../styles/X/X.css';
 

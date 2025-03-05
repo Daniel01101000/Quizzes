@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
-import CardFlashcard from "../Pages/Flashcards/Cards/CardFlashcard.jsx"; 
-import '../../styles/Cards/CardFlashcards.css';
-import Emojis from "../Emojis/Emojis.jsx";
+import CardFlashcard from "components/Pages/Flashcards/Cards/CardFlashcard.jsx"; 
+import 'styles/Cards/CardFlashcards.css';
+import Emojis from "components/Emojis/Emojis.jsx";
 
 const FlashcardsListWithoutCreate = () => {
   const flashcards = useSelector((state) => state.cardsFlashcards.cards) || [];

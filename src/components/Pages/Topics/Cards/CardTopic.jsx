@@ -1,5 +1,5 @@
 import React from "react";
-import '../../../styles/Cards/CardTopic.css';
+import 'styles/Cards/CardTopic.css';
 
 export default function CardTopic({ name, description }) {
   return (
