@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { addQuiz } from "store/quizzesSlice"; // ✅ Importar `addQuiz`
+import { addQuiz } from "store/CardsSlices/Quiz/quizzesSlice"; // ✅ Importar `addQuiz`
 import { v4 as uuidv4 } from "uuid"; // Para generar IDs únicos
 import "styles/createCards/CreateCards.css";
 import { useParams } from "react-router-dom";

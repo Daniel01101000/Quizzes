@@ -1,7 +1,7 @@
 import React from 'react';
 import 'styles/Sections/SectionWhite.css';
 import QuizzesList from 'components/Pages/Topics/Extensions/QuizzesList.jsx';
-import 'styles/Titles.css';
+import 'styles/Titles/Titles.css';
 
 const SectionFlashcardsList = () => {
   return (

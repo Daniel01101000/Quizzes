@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import CreateQuiz from "components/Pages/Quizzes/CreateQuiz/CreateQuiz.jsx";
 import { useDispatch } from "react-redux";
 import X from "components/X/X-button.jsx";
-import { removeCard as removeQuiz } from "store/cardsSliceQuizzes.js"; // Importa la acción
+import { removeCard as removeQuiz } from "store/CardsSlices/Quiz/cardsSliceQuizzes.js"; // Importa la acción
 import Emojis from "components/Emojis/Emojis.jsx";
 
 const QuizzesList = () => {

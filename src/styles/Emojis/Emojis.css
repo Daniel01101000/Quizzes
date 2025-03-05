@@ -7,6 +7,6 @@
 
 @media (max-width: 900px) {
     .emoji {
-        font-size: 90px; /* Reduce el tamaño de la fuente */
+        font-size: 80px; /* Reduce el tamaño de la fuente */
     }
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import 'styles/Sections/SectionWhite.css';
 import CardsList from '../../../Pages/Quizzes/Cards/CardsList.jsx';
-import 'styles/Titles.css';
+import 'styles/Titles/Titles.css';
 
 const SectionWhiteQuiz = () => {
   return (

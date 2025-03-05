@@ -1,6 +1,6 @@
 import React, { useState } from "react"; 
 import { useDispatch } from "react-redux";
-import { addCard } from "store/cardsSliceFlashcards";
+import { addCard } from "store/CardsSlices/Flashcard/cardsSliceFlashcards";
 import { v4 as uuidv4 } from "uuid"; // 🔥 Importar uuid para IDs únicos
 import "styles/createCards/CreateCards.css";
 

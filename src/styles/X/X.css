@@ -8,5 +8,5 @@
   font-size: 29px;
   cursor: pointer;
   color: #666666;
-  z-index: 10;  
+  z-index: 1000;  
 }

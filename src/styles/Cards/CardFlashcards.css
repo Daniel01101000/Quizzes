@@ -94,3 +94,16 @@
   background-color: #FF4C4C ; /* Rojo */
   color: white;
 }
+
+@media (max-width: 820px) {
+  .cardFlashcard {
+    background-color: #fff;
+    width: 300px;
+    height: auto;
+    padding: 20px;
+    min-height: 300px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+}
