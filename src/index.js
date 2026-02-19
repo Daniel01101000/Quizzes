@@ -8,7 +8,7 @@ import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <BrowserRouter>  {/* Envolvemos la app con BrowserRouter aquí */}
+  <BrowserRouter basename="/Quizzes">  {/* Envolvemos la app con BrowserRouter aquí */}
     <React.StrictMode>
     <Provider store={store}>
       <App />

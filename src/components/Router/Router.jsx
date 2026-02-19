@@ -10,7 +10,7 @@ import SectionQuizzesList from 'components/Sections/QuizzesList/SectionQuizzesLi
 const AppRouter = () => {
   return (
     <Routes>
-      <Route path="/Home" element={<Home />} />
+      <Route path="/" element={<Home />} />
       <Route path="/topics" element={<Topics />} />
       <Route path="/quizzes" element={<Quizzes />} />
       <Route path="/flashcards" element={<Flashcards />} />
